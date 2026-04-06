@@ -19,7 +19,7 @@ RESTRICT="mirror strip"
 RDEPEND="
 	dev-libs/openssl
 	dev-libs/glib:2
-	net-libs/webkit2gtk:4.1
+	net-libs/webkit-gtk:4.1
 	x11-libs/gtk+:3
 	x11-libs/libxcb
 	x11-libs/libX11
