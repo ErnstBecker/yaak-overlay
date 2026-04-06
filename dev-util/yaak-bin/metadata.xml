@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Yaak is a fast, privacy-first, offline-first desktop API client.
+    Supports REST, GraphQL, gRPC, WebSocket and SSE. No telemetry,
+    no cloud lock-in, encrypted local storage.
+  </longdescription>
+  <upstream>
+    <remote-id type="github">mountain-loop/yaak</remote-id>
+  </upstream>
+</pkgmetadata>
