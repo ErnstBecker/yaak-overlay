@@ -27,26 +27,26 @@ RDEPEND="
 "
 
 QA_PREBUILT="
-	opt/${MY_PN}/yaak-app
-	opt/${MY_PN}/vendored/node/yaaknode
-	opt/${MY_PN}/vendored/protoc/yaakprotoc
+	usr/lib/${MY_PN}/yaak-app
+	usr/lib/${MY_PN}/vendored/node/yaaknode
+	usr/lib/${MY_PN}/vendored/protoc/yaakprotoc
 "
 
 S="${WORKDIR}/${MY_PN}-bin-${PV}-x86_64"
 
 src_install() {
-	insinto "/opt/${MY_PN}"
+	insinto "/usr/lib/${MY_PN}"
 	insopts -m0755
 	doins yaak-app
 
-	insinto "/opt/${MY_PN}/vendored"
+	insinto "/usr/lib/${MY_PN}/vendored"
 	insopts -m0644
 	doins -r vendored/.
 
-	fperms 0755 "/opt/${MY_PN}/vendored/node/yaaknode"
-	fperms 0755 "/opt/${MY_PN}/vendored/protoc/yaakprotoc"
+	fperms 0755 "/usr/lib/${MY_PN}/vendored/node/yaaknode"
+	fperms 0755 "/usr/lib/${MY_PN}/vendored/protoc/yaakprotoc"
 
-	dosym "/opt/${MY_PN}/yaak-app" "/usr/bin/yaak"
+	dosym "/usr/lib/${MY_PN}/yaak-app" "/usr/bin/yaak"
 
 	newicon icons/128x128.png yaak.png
 
